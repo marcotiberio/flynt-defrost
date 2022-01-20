@@ -2,8 +2,8 @@
   font-size: 0.8rem;
 
   .container {
-    padding-bottom: $component-spacing-mobile;
-    padding-top: $component-spacing-mobile;
+    padding-bottom: $spacing-small;
+    padding-top: $spacing-small;
     text-align: center;
 
     @media (min-width: $breakpoint-tablet) {

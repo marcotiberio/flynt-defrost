@@ -561,26 +561,26 @@ select {
 }
 
 .componentSpacing {
-  margin: $component-spacing-mobile 0;
+  margin: $spacing-small 0;
 
   @media (min-width: $breakpoint-tablet) {
-    margin: $component-spacing-tablet 0;
+    margin: $spacing-small 0;
   }
 
   @media (min-width: $breakpoint-desktop) {
-    margin: $component-spacing-desktop 0;
+    margin: $spacing-large 0;
   }
 
   &[class*='theme'] {
     margin: 0;
-    padding: $component-spacing-mobile 0;
+    padding: $spacing-small 0;
 
     @media (min-width: $breakpoint-tablet) {
-      padding: $component-spacing-tablet 0;
+      padding: $spacing-small 0;
     }
 
     @media (min-width: $breakpoint-desktop) {
-      padding: $component-spacing-desktop 0;
+      padding: $spacing-large 0;
     }
   }
 }
@@ -589,11 +589,11 @@ select {
   @include center;
 
   @media (min-width: $breakpoint-tablet) {
-    @include center($padding: $container-padding-tablet);
+    @include center($padding: $spacing-small);
   }
 
   @media (min-width: $breakpoint-desktop) {
-    @include center($padding: $container-padding-desktop);
+    @include center($padding: $spacing-large);
   }
 }
 
@@ -609,11 +609,11 @@ select {
   text-align: center;
 
   @media (min-width: $breakpoint-tablet) {
-    margin-bottom: $container-padding-tablet;
+    margin-bottom: $spacing-small;
   }
 
   @media (min-width: $breakpoint-desktop) {
-    margin-bottom: $container-padding-desktop;
+    margin-bottom: $spacing-large;
   }
 }
 
@@ -624,11 +624,11 @@ select {
   text-align: center;
 
   @media (min-width: $breakpoint-tablet) {
-    margin-top: $container-padding-tablet;
+    margin-top: $spacing-small;
   }
 
   @media (min-width: $breakpoint-desktop) {
-    margin-top: $container-padding-desktop;
+    margin-top: $spacing-large;
   }
 }
 
@@ -668,26 +668,26 @@ select {
 .post {
   &-main {
     .componentSpacing {
-      margin: $component-spacing-mobile/2 0;
+      margin: $spacing-small/2 0;
 
       @media (min-width: $breakpoint-tablet) {
-        margin: $component-spacing-tablet/2 0;
+        margin: $spacing-small/2 0;
       }
 
       @media (min-width: $breakpoint-desktop) {
-        margin: $component-spacing-desktop/2 0;
+        margin: $spacing-large/2 0;
       }
 
       &[class*='theme'] {
         margin: 0;
-        padding: $component-spacing-mobile/2 0;
+        padding: $spacing-small/2 0;
 
         @media (min-width: $breakpoint-tablet) {
-          padding: $component-spacing-tablet/2 0;
+          padding: $spacing-small/2 0;
         }
 
         @media (min-width: $breakpoint-desktop) {
-          padding: $component-spacing-desktop/2 0;
+          padding: $spacing-large/2 0;
         }
       }
     }

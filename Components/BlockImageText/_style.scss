@@ -1,6 +1,6 @@
 [is='flynt-block-image-text'] {
   .container {
-    @include center(500px + 2 * $container-padding-mobile);
+    @include center(500px + 2 * $spacing-small);
   }
 
   .box-inner {
@@ -8,22 +8,22 @@
   }
 
   @media (max-width: $breakpoint-tablet-horizontal - 1) {
-    margin: $component-spacing-tablet 0;
+    margin: $spacing-small 0;
   }
 
   @media (min-width: $breakpoint-tablet-horizontal) {
     .container {
-      @include center(1080px + 2 * $container-padding-tablet, $container-padding-tablet);
+      @include center(1080px + 2 * $spacing-small, $spacing-small);
     }
 
     .box {
       align-items: center;
       display: flex;
-      margin: 0 $container-padding-tablet * -1;
+      margin: 0 $spacing-small * -1;
 
       &-inner {
         @include reset-content-margins('both');
-        padding: 0 $container-padding-tablet;
+        padding: 0 $spacing-small;
         width: 50%;
       }
 

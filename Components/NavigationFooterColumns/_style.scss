@@ -1,11 +1,11 @@
 [is='flynt-navigation-footer-columns'] {
   @import 'Partials/menu';
-  padding-bottom: $component-spacing-mobile;
-  padding-top: $component-spacing-mobile;
+  padding-bottom: $spacing-small;
+  padding-top: $spacing-small;
 
   @media (min-width: $breakpoint-tablet) {
-    padding-bottom: $component-spacing-tablet;
-    padding-top: $component-spacing-tablet;
+    padding-bottom: $spacing-small;
+    padding-top: $spacing-small;
   }
 
   + [is='flynt-navigation-footer'] .container {
