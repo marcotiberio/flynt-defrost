@@ -1,4 +1,11 @@
 [is='flynt-block-wysiwyg'] {
+  margin-bottom: $spacing-component/2;
+  
+  .container {
+    grid-column-end: 9;
+    grid-column-start: 4;
+  }
+
   .content {
     @include reset-content-margins;
     text-align: inherit;

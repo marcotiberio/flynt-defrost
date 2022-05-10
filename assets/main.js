@@ -2,8 +2,10 @@ import './scripts/publicPath'
 import 'console-polyfill'
 import 'normalize.css/normalize.css'
 import './main.scss'
+import './scripts/scroll.js'
 import $ from 'jquery'
 import feather from 'feather-icons'
+import smoothscroll from 'smoothscroll-polyfill'
 
 import installCE from 'document-register-element/pony'
 
@@ -28,4 +30,7 @@ function importAll (r) {
   r.keys().forEach(r)
 }
 
+smoothscroll.polyfill()
+
 importAll(require.context('../Components/', true, /\/script\.js$/))
+require.resolve('./scripts/scroll.js')

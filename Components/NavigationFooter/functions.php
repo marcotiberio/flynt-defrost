@@ -3,6 +3,7 @@
 namespace Flynt\Components\NavigationFooter;
 
 use Flynt\Utils\Options;
+use Flynt\Utils\Asset;
 use Timber\Menu;
 use Flynt\Shortcodes;
 
@@ -15,6 +16,16 @@ add_action('init', function () {
 add_filter('Flynt/addComponentData?name=NavigationFooter', function ($data) {
     $data['maxLevel'] = 0;
     $data['menu'] = new Menu('navigation_footer');
+
+    return $data;
+});
+
+add_filter('Flynt/addComponentData?name=NavigationFooter', function ($data) {
+    $data['menu'] = new Menu('navigation_footer');
+    $data['logo'] = [
+        'src' => get_theme_mod('custom_header_logo') ? get_theme_mod('custom_header_logo') : Asset::requireUrl('Components/NavigationFooter/Assets/logo.svg'),
+        'alt' => get_bloginfo('name')
+    ];
 
     return $data;
 });

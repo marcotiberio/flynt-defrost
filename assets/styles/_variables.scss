@@ -6,15 +6,19 @@ $breakpoint-desktop-wide: 1440px;
 
 $container-max-width: 1680px;
 $content-max-width: 1200px;
-$spacing-large: 40px;
-$spacing-small: 20px;
-$gap: 20px;
+$spacing-large: 30px;
+$spacing-small: 15px;
+$spacing-component: 100px;
+$gap: 15px;
 
 $black: #000;
-$white: #fff;
+$white: #f5f0f0;
+$orange: #ff5c00;
+$purple: #cba4f7;
+$grey: #c3bebe;
 
-$color-brand: #0d8eff;
-$color-accent: #f96417;
+$color-brand: $purple;
+$color-accent: $orange;
 $color-background: $white;
 $color-contrast: $black;
 $color-text: $black;

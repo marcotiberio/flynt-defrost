@@ -13,11 +13,14 @@
 
   &-link {
     color: currentColor;
+    font-weight: 700;
     text-decoration: none;
 
     &:hover,
     &:focus {
-      color: $color-accent;
+      color: $color-text;
+      text-decoration: underline;
+      text-underline-offset: 3px;
     }
   }
 }

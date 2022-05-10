@@ -31,8 +31,9 @@ html {
 }
 
 body {
-  height: 100%;
+  height: fit-content;
   overflow-x: hidden;
+  padding: $spacing-large $spacing-small;
 }
 
 /**
@@ -42,7 +43,7 @@ body {
 */
 
 #{$heading-selectors} {
-  color: $color-headline;
+  color: inherit;
   font-weight: 700;
   line-height: 1.45;
   margin-bottom: 0.9rem;
@@ -51,7 +52,7 @@ body {
   a,
   a:hover,
   a:focus {
-    color: $color-headline;
+    color: inherit;
     text-decoration: none;
   }
 }
@@ -538,6 +539,10 @@ select {
 * Global layout classes for a consistent appearance.
 */
 
+.page {
+  background-color: $orange;
+}
+
 .pageWrapper {
   display: flex;
   flex-direction: column;
@@ -554,6 +559,13 @@ select {
 
 .mainContent {
   flex: 1 0 auto;
+
+  .flyntComponent {
+    column-gap: $gap;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    position: relative;
+  }
 }
 
 .flyntComponent {
@@ -561,27 +573,24 @@ select {
 }
 
 .componentSpacing {
-  margin: $spacing-small 0;
+  margin-bottom: $spacing-component;
 
   @media (min-width: $breakpoint-tablet) {
-    margin: $spacing-small 0;
+    margin-bottom: $spacing-component;
   }
 
   @media (min-width: $breakpoint-desktop) {
-    margin: $spacing-large 0;
+    margin-bottom: $spacing-component;
+  }
+}
+
+> .componentSpacing {
+  &:first-child {
+    margin-top: $spacing-component;
   }
 
-  &[class*='theme'] {
-    margin: 0;
-    padding: $spacing-small 0;
-
-    @media (min-width: $breakpoint-tablet) {
-      padding: $spacing-small 0;
-    }
-
-    @media (min-width: $breakpoint-desktop) {
-      padding: $spacing-large 0;
-    }
+  &:last-child {
+    margin-bottom: 0;
   }
 }
 
@@ -666,35 +675,37 @@ select {
 /* Custom styling for single post layouts */
 
 .post {
+  column-gap: $gap;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  position: relative;
+
+  &-header {
+    grid-column-end: 8;
+    grid-column-start: 4;
+  }
+
+  &-featuredImage {
+    grid-column-end: 13;
+    grid-column-start: 1;
+  }
+
   &-main {
     .componentSpacing {
-      margin: $spacing-small/2 0;
+      margin-bottom: $spacing-component;
 
       @media (min-width: $breakpoint-tablet) {
-        margin: $spacing-small/2 0;
+        margin-bottom: $spacing-component;
       }
 
       @media (min-width: $breakpoint-desktop) {
-        margin: $spacing-large/2 0;
-      }
-
-      &[class*='theme'] {
-        margin: 0;
-        padding: $spacing-small/2 0;
-
-        @media (min-width: $breakpoint-tablet) {
-          padding: $spacing-small/2 0;
-        }
-
-        @media (min-width: $breakpoint-desktop) {
-          padding: $spacing-large/2 0;
-        }
+        margin-bottom: $spacing-component;
       }
     }
 
     > .componentSpacing {
       &:first-child {
-        margin-top: 0;
+        margin-top: $spacing-component;
       }
 
       &:last-child {

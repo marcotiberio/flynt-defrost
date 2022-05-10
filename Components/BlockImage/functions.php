@@ -39,7 +39,6 @@ function getACFLayout()
                 'type' => 'group',
                 'layout' => 'row',
                 'sub_fields' => [
-                    FieldVariables\getTheme(),
                     [
                         'label' => __('Size', 'flynt'),
                         'name' => 'size',
@@ -48,13 +47,10 @@ function getACFLayout()
                         'save_other_choice' => 0,
                         'layout' => 'horizontal',
                         'choices' => [
-                            'sizeSmall' => __('Small', 'flynt'),
-                            'sizeMedium' => __('Medium', 'flynt'),
-                            'sizeLarge' => __('Large (Default)', 'flynt)'),
-                            'sizeHuge' => __('Huge', 'flynt'),
-                            'sizeFull' => __('Full', 'flynt'),
+                            'sizeHalf' => __('Half', 'flynt'),
+                            'sizeFull' => __('Full (Default)', 'flynt'),
                         ],
-                        'default_value' => 'sizeLarge',
+                        'default_value' => 'sizeFull',
                         'wrapper' =>  [
                             'width' => '100',
                         ],
